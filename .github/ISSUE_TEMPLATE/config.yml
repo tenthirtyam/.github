@@ -1,1 +1,8 @@
 blank_issues_enabled: false
+contact_links:
+  - name: Find me on VMware {code}.
+    url: https://vmwarecode.slack.com
+    about: Sign up for VMware {code} and send me a message.
+  - name: Follow me on Twitter.
+    url: https://twitter.com/tenthirtyam
+    about: Direct message me on Twitter.
