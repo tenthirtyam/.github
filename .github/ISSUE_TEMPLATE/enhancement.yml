@@ -1,0 +1,43 @@
+---
+name: Enhancement
+description: Suggest an enhancement.
+title: Add support for {{ description }}
+labels: [enhancement]
+assignees: [tenthirtyam]
+body:
+  - type: markdown
+    attributes:
+      value: When filing a documentation issue, please include the following information.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: This project has a Code of Conduct that all participants are expected to understand and follow.
+      options:
+        - label: I have read and agree to the project's Code of Conduct.
+          required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A written overview of the enhancement .
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case(s)
+      description: Please provide a use case or scenario.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: |
+        Please provide any related GitHub issues or pull requests (open or closed) or documentation.
+        Learn about [Referencing Github Issues and Pull Requests](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#referencing-issues-and-pull-requests).
+      placeholder: |
+        #0000
+    validations:
+      required: false

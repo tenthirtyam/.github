@@ -1,0 +1,40 @@
+---
+name: Lock
+
+on:
+  schedule:
+    - cron: 30 00 * * *
+
+permissions:
+  contents: read
+
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: dessant/lock-threads@1bf7ec25051fe7c00bdd17e6a7cf3d7bfb7dc771 # v5.0.1
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+          issue-comment: |
+            I'm locking this issue as it has been closed for 30 days to help me
+            focus on active discussions and issues.
+
+            If you encounter a similar problem, please open a new issue and
+            complete the issue template so I can gather all the necessary
+            details to investigate further.
+
+            — [Ryan Johnson](https://github.com/tenthirtyam)
+          issue-inactive-days: 30
+          pr-comment: |
+            I'm locking this pull request as it has been closed for 30 days to
+            help me focus on active discussions and issues.
+
+            If you encounter a similar problem, please open a new issue and
+            complete the issue template so I can gather all the necessary
+            details to investigate further.
+
+            — [Ryan Johnson](https://github.com/tenthirtyam)
+          pr-inactive-days: 30

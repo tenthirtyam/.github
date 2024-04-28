@@ -1,0 +1,9 @@
+# macOS
+## Ignore desktop services files.
+**/.DS_Store
+
+# JetBrains IDEs
+.idea/
+
+# Visual Studio Code
+.vscode/
