@@ -1,0 +1,15 @@
+---
+version: "3"
+
+tasks:
+  default:
+    desc: Show tasks.
+    cmds:
+      - task --list
+    silent: true
+
+  format:
+    desc: Format files.
+    cmds:
+      - echo "==> Formatting files..."
+      - npx prettier --write .
